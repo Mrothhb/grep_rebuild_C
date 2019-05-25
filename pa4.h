@@ -1,7 +1,7 @@
 /*
  * Filename: pa4.h
- * Author: TODO
- * UserId: TODO
+ * Author: Matt Roth
+ * UserId: cs30xgs
  * Date: TODO
  * Sources of help: Given.
  */
@@ -17,11 +17,11 @@
 // =============================================================================
 
 // argInfo_t flag values
-#define ARG_HELP_FLAG  0x1
-#define ARG_I_FLAG     0x2
-#define ARG_V_FLAG     0x4
-#define ARG_C_FLAG     0x8
-#define ARG_N_FLAG     0x10
+#define ARG_HELP_FLAG  0x00000001
+#define ARG_I_FLAG     0x00000002
+#define ARG_V_FLAG     0x00000004
+#define ARG_C_FLAG     0x00000008
+#define ARG_N_FLAG     0x00000010
 #define ARG_MULTI_FILE 0x80000000
 
 // processArg() constants
@@ -32,6 +32,8 @@
 #define COUNT_FLAG 'c' 
 #define LINE_NUMBER_FLAG 'n' 
 #define HELP_FLAG 'h' 
+#define TWO_ARGS 2
+#define THREE_ARGS 3
 
 #define PATTERN_LONG "regexp" 
 #define IGNORE_CASE_LONG "ignore-case"
