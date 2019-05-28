@@ -28,6 +28,11 @@ void testlineMatchesRegex() {
  const char * line5 = "match";
  const char * line6 = "MATCH";
 
+ const char * line7 = "[a-z]*";
+ const char * line8 = "-'`";
+
+ const char * line9 = "abc*";
+ const char * line10 = "abcd";
 
 
  int cflags = REG_EXTENDED | REG_NOSUB;
@@ -57,11 +62,21 @@ void testlineMatchesRegex() {
  regcomp( &(info.pattern), line5, cflags ); 
  TEST( lineMatchesRegex( &info.pattern, line6) == 1);
 
+ cflags =  REG_EXTENDED | REG_NOSUB;
+ memset( &info, 0, sizeof(argInfo_t) );
+ regcomp( &(info.pattern), line7, cflags ); 
+ TEST( lineMatchesRegex( &info.pattern, line8) == 1);
+
+
+ cflags =  REG_EXTENDED | REG_NOSUB;
+ memset( &info, 0, sizeof(argInfo_t) );
+ regcomp( &(info.pattern), line9, cflags ); 
+ TEST( lineMatchesRegex( &info.pattern, line10) == 1);
 }
 
 int main( void ) {
   
-  fprintf( stderr, "Running tests for processArgs.c...\n" );
+  fprintf( stderr, "Running tests for lineMatchesRegex.s...\n" );
   testlineMatchesRegex();
   fprintf( stderr, "Done running tests!\n" );
 

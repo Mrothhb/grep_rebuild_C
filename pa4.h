@@ -34,6 +34,8 @@
 #define HELP_FLAG 'h' 
 #define TWO_ARGS 2
 #define THREE_ARGS 3
+#define EMPTY_STR ""
+#define READ "r"
 
 #define PATTERN_LONG "regexp" 
 #define IGNORE_CASE_LONG "ignore-case"
@@ -44,6 +46,7 @@
 
 #define ARG_PARSING_ERROR (-1)
 #define REGEX_ERROR (-2)
+#define RUNNING 1
 
 // readLine() constants
 #define NEWLINE_CHAR '\n'

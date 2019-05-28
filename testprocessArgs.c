@@ -1,9 +1,9 @@
 /*
  * Filename: testprocessArgs.c
  * Author: Matt Roth
- * UserId: cs
+ * UserId: cs30xgs 
  * Date: TODO
- * Sources of help: TODO
+ * Sources of help: textbook, cse 30 website, lecture notes, discussion notes. 
  */
 
 #include <stdio.h>
@@ -87,6 +87,27 @@ void testprocessArgs() {
 
   TEST( processArgs( &info, argc, argv5 ) == 0 );
   TEST( optind == 7);
+
+    
+  memset( &info, 0, sizeof(argInfo_t) );
+  argc = 4;
+  char * argv6[] = { "./exe","-k", "abc*", "file0"};
+  optind = 0;
+
+  TEST( processArgs( &info, argc, argv6 ) == -1 );
+  TEST( info.flags == 0);
+  TEST( optind == 2);
+
+      
+  memset( &info, 0, sizeof(argInfo_t) );
+  argc = 5;
+  char * argv7[] = { "./exe","-k", "-a", "abc*", "file0"};
+  optind = 0;
+
+  TEST( processArgs( &info, argc, argv7 ) == -1 );
+  TEST( info.flags == 0);
+  TEST( optind == 2);
+
 }
 
 int main( void ) {

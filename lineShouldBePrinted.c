@@ -36,14 +36,14 @@ int lineShouldBePrinted( const char * line, const argInfo_t * info ) {
 
       return 0;
     } 
-    
+
     // print lines that dont match 
     else {
 
       return 1;
     }
   } 
-  
+
   // Check for matching lines when the -v flag is not set 
   else {
 
@@ -51,7 +51,7 @@ int lineShouldBePrinted( const char * line, const argInfo_t * info ) {
 
       return 1;
     }
-    
+
     // The line does not match and the -v flag was not set 
     else {
 
