@@ -2,7 +2,7 @@
  * Filename: readLine.c
  * Author: Matt Roth
  * UserId: cs30xgs
- * Date: TODO
+ * Date: May 29th, 2019
  * Sources of help: textbook, lecture notes, discussion notes, cse 30 website.
  */
 
@@ -30,8 +30,12 @@ char * readLine( FILE * inputFile ) {
 
   // create a buffer and allocate memory to the empty string 
   char buffer[LINE_BUFFER_SIZE];
-  char * str = calloc( 1, sizeof( char ));
+  char * str = calloc( 0, sizeof( char ));
   int end_loop = 0;
+
+  if( inputFile == NULL ){
+    return NULL;
+  }
 
   // Read each line in the file 
   while( RUNNING ) {
@@ -77,7 +81,7 @@ char * readLine( FILE * inputFile ) {
     free( str );
     return NULL;
   }
-
+  
   // return the string 
   return str;
 

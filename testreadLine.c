@@ -28,6 +28,8 @@ void testreadLine() {
   "htjkrwehtkwjerhtrekjhtrkjwehtwlrekjhtlkwejtlkjwrehltwrekjhtwekjhtjewkhtkjrwe"
   "thrjwekhtrkjwehkjthjwekhrwejkhtwejkhtwjrekhtjkj";
 
+  const char * empty = "";
+
   fp = fopen( "normal.txt", "r" );
   str = readLine( fp );
   TEST( strcmp( string, str ) == 0);
@@ -36,11 +38,10 @@ void testreadLine() {
   fp = fopen( "text.txt", "r");
   str = readLine( fp );
   TEST( str == NULL );
-  fclose(fp);
   
   fp = fopen( "textempty.txt", "r");
   str = readLine( fp );
-  TEST( str == NULL);
+  TEST( strcmp(str, empty) == 0 );
   fclose(fp);
 
   fp = fopen( "longstring.txt", "r");
@@ -48,6 +49,10 @@ void testreadLine() {
   TEST( strcmp(str, longstr) == 0);
   fclose(fp);
 
+  fp = fopen( "textempty.txt", "r");
+  str = readLine( fp );
+  TEST( strcmp(str, empty) == 0);
+  fclose(fp);
 
  }
 

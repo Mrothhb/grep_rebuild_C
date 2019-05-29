@@ -56,7 +56,8 @@ int count( const argInfo_t * info, const char * filename ) {
 
         ++count;
       }
-    }  
+    }
+    free( str );
   }
 
   // Check for multi files and -n flag 

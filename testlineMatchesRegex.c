@@ -2,7 +2,7 @@
  * Filename: testlineMatchesRegex.c
  * Author: Matt Roth
  * UserId: cs30xgs
- * Date: TODO
+ * Date: Mayb 29th, 2019
  * Sources of help: text book, cse 30 website, lecture notes, discussion notes.
  */
 
@@ -33,6 +33,10 @@ void testlineMatchesRegex() {
 
  const char * line9 = "abc*";
  const char * line10 = "abcd";
+
+ const char * line11 = "[0-9]*";
+ const char * line12 = "1234";
+ 
 
 
  int cflags = REG_EXTENDED | REG_NOSUB;
@@ -72,6 +76,17 @@ void testlineMatchesRegex() {
  memset( &info, 0, sizeof(argInfo_t) );
  regcomp( &(info.pattern), line9, cflags ); 
  TEST( lineMatchesRegex( &info.pattern, line10) == 1);
+
+ cflags =  REG_EXTENDED | REG_NOSUB;
+ memset( &info, 0, sizeof(argInfo_t) );
+ regcomp( &(info.pattern), line11, cflags ); 
+ TEST( lineMatchesRegex( &info.pattern, line12) == 1);
+
+ cflags =  REG_EXTENDED | REG_NOSUB;
+ memset( &info, 0, sizeof(argInfo_t) );
+ regcomp( &(info.pattern), line11, cflags ); 
+ TEST( lineMatchesRegex( &info.pattern, line10) == 1);
+
 }
 
 int main( void ) {

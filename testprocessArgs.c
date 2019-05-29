@@ -2,7 +2,7 @@
  * Filename: testprocessArgs.c
  * Author: Matt Roth
  * UserId: cs30xgs 
- * Date: TODO
+ * Date: May 29th, 2019
  * Sources of help: textbook, cse 30 website, lecture notes, discussion notes. 
  */
 
@@ -10,7 +10,6 @@
 #include <regex.h>
 #include <string.h>
 #include <getopt.h>
-
 #include "pa4.h"
 #include "test.h"
 
@@ -28,6 +27,7 @@
  */
 
 void testprocessArgs() {
+
   argInfo_t info = { 0 };
   //int pattern = 0;
   
@@ -84,8 +84,8 @@ void testprocessArgs() {
   argc = 7;
   char * argv5[] = { "./exe","-e", "pattern", "-i", "-v", "-n", "-c"};
   optind = 0;
-
   TEST( processArgs( &info, argc, argv5 ) == 0 );
+  TEST( info.flags == (ARG_N_FLAG | ARG_I_FLAG | ARG_V_FLAG | ARG_C_FLAG) );  
   TEST( optind == 7);
 
     
@@ -108,6 +108,15 @@ void testprocessArgs() {
   TEST( info.flags == 0);
   TEST( optind == 2);
 
+  memset( &info, 0, sizeof(argInfo_t) );
+  argc = 0;
+  char * argv8[] = {""};
+  optind = 0;
+
+  TEST( processArgs( &info, argc, argv8 ) == 0 );
+  TEST( info.flags == 0 );
+  TEST( optind == 1 );
+  
 }
 
 int main( void ) {

@@ -2,7 +2,7 @@
  * Filename: lineMatchesRegex.s
  * Author: Matt Roth 
  * UserId: cs30xgs
- * Date: TODO
+ * Date: May 29th, 2019
  * Sources of Help: Textbook, lecture notes, and discussion section notes.
  *
  */

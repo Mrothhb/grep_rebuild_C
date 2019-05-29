@@ -65,10 +65,11 @@ int search( const argInfo_t * info, const char * filename ) {
 
         // print the line to stdout, free the string, and increment the linenum 
         fprintf( stdout, STR_LINE, str );
-        free( str );
-        ++line_num;
       }
-    }  
+    }
+    // Keep track of the line number and free the allocated memory 
+    ++line_num;
+    free( str );
   }
 
   // Close the file and exit 

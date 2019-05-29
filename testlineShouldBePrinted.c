@@ -2,7 +2,7 @@
  * Filename: testlineShouldBePrinted.c
  * Author: Matt Roth
  * UserId: cs30xgs
- * Date: TODO
+ * Date: May 29th, 2019
  * Sources of help: text book, cse 30 website, lecture notes, discussion notes.
  */
 
@@ -24,12 +24,14 @@ void testlineShouldBePrinted() {
  int cflags = REG_EXTENDED | REG_NOSUB;
 
  const char * line1 = "test";
- const char * line2 = "test";
 
  const char * line3 = "nananana ";
  const char * line4 = " anana ana ";
 
  const char * line5 = " ANANA ANA ";
+
+ const char * line6 = "abc*";
+ const char * line7 = "abcd";
 
   
  memset( &info, 0, sizeof(argInfo_t) );
@@ -78,6 +80,12 @@ void testlineShouldBePrinted() {
  info.flags = info.flags | ARG_I_FLAG;
  regcomp( &(info.pattern), line4, cflags ); 
  TEST( lineShouldBePrinted(line5, &info) == 1);
+
+ 
+ memset( &info, 0, sizeof(argInfo_t) );
+ cflags = REG_EXTENDED | REG_NOSUB;
+ regcomp( &(info.pattern), line6, cflags ); 
+ TEST( lineShouldBePrinted(line7, &info) == 1);
 }
 
 int main( void ) {

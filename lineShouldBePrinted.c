@@ -2,7 +2,7 @@
  * Filename: processArgs.c
  * Author: Matt Roth
  * UserId: cs30xgs
- * Date: TODO
+ * Date: May 29th, 2019
  * Sources of help: textbook, lecture notes, discussion notes, cse 30 website.
  */
 
