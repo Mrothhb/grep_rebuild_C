@@ -2,7 +2,7 @@
  * Filename: count.c
  * Author: Matt Roth
  * UserId: cs30xgs
- * Date: TODO
+ * Date: June 2nd, 2019
  * Sources of help: textbook, lecture notes, discussion notes, cse 30 website.
  */
 
@@ -27,9 +27,9 @@
  */
 int count( const argInfo_t * info, const char * filename ) {
 
-  FILE * fp;
-  char * str; 
-  int count = 0;
+  FILE * fp;      // Create a file pointer 
+  char * str;     // Create a string pointer
+  int count = 0;  // Hold the count of each occurrence 
 
   // Open the file 
   fp = openFile( filename );
@@ -57,6 +57,8 @@ int count( const argInfo_t * info, const char * filename ) {
         ++count;
       }
     }
+
+    // Deallocate the memory 
     free( str );
   }
 
@@ -67,7 +69,6 @@ int count( const argInfo_t * info, const char * filename ) {
 
   // print the count to stdout, free the string
   fprintf( stdout, STR_COUNT, count );
-  free( str );
 
   // Close the file and exit 
   fclose( fp );

@@ -1,2 +1,54 @@
-sample.txt:Our honey is being brazenly stolen on a massive scale!
-sample.txt:"The surface area of the wings and body mass make no sense."
+/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:int compareWordData( const void * w1, const void * w2 );
+/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:void createWordData( wordData_t * wordData, const char * wordStr,
+/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:void buildPlot( char plotArr[PLOT_ROWS][PLOT_COLS], const wordData_t * word,
+/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:void printPlot( char plotArr[PLOT_ROWS][PLOT_COLS], unsigned int minCount,
+/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:void printData( const wordData_t * word );
+/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:void interactiveLoop( const wordTable_t * table );
+/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:int shouldPrompt( void );
+/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:void printTable( const wordTable_t * table );
+/home/linux/ieng6/cs30x/cs30xgs/pa3/printTable.c: * Function Prototype: void printWordDataPtr(tableSlot_t * slot);
+/home/linux/ieng6/cs30x/cs30xgs/pa3/printTable.c:static void printWordDataPtr(tableSlot_t * slot) {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/printTable.c: * Function Prototype: void printTable(wordTable_t * table);
+/home/linux/ieng6/cs30x/cs30xgs/pa3/printTable.c:void printTable(const wordTable_t * table) {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/test.h:#define TEST(EX) (void)((fprintf( stderr, "(%s:%d) %s:", __FILE__, __LINE__,\
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testaddWordCount.c:void testaddWordCount() {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testaddWordCount.c:int main( void ) {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/shouldPrompt.c: * Function Prototype: int shouldPrompt( void );
+/home/linux/ieng6/cs30x/cs30xgs/pa3/shouldPrompt.c:int shouldPrompt( void ) {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testcomputeHash.c:void testcomputeHash() {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testcomputeHash.c:int main( void ) {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testcreateWordData.c:void testcreateWordData() {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testcreateWordData.c:int main( void ) {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/buildPlot.c: * Function Prototype:  void buildPlot( char plotArr[PLOT_ROWS][PLOT_COLS],
+/home/linux/ieng6/cs30x/cs30xgs/pa3/buildPlot.c:void buildPlot( char plotArr[PLOT_ROWS][PLOT_COLS], const wordData_t * word, 
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testfindSlotIndex.c:void testfindSlotIndex() {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testfindSlotIndex.c:int main( void ) {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testbuildPlot.c:void testbuildPlot() {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testbuildPlot.c:int main( void ) {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/createWordData.c: * Function Prototype:  void createWordData( wordData_t * wordData, const char 
+/home/linux/ieng6/cs30x/cs30xgs/pa3/createWordData.c:void createWordData( wordData_t * wordData, const char * wordStr,
+/home/linux/ieng6/cs30x/cs30xgs/pa3/createWordData.c:  // If void pointer or wordStr is Null return 
+/home/linux/ieng6/cs30x/cs30xgs/pa3/interactiveLoop.c: * Function Prototype: void interactiveLoop( const wordTable_t * table );
+/home/linux/ieng6/cs30x/cs30xgs/pa3/interactiveLoop.c:void interactiveLoop( const wordTable_t * table ) {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testbuildWordTable.c:void testbuildWordTable() {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testbuildWordTable.c:int main( void ) {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/compareWordData.s: * Function Prototype: int compareWordData( const void * w1, const void * w2 );
+/home/linux/ieng6/cs30x/cs30xgs/pa3/compareWordData.s: * Description: This function takes two void pointers in its signature, but your
+/home/linux/ieng6/cs30x/cs30xgs/pa3/compareWordData.s: * Parameters: w1 - The first void pointer.
+/home/linux/ieng6/cs30x/cs30xgs/pa3/compareWordData.s: *	       w2 - The second void pointer.	
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testmyURem.c:void testmyURem() {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testmyURem.c:int main( void ) {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testcompareWordData.c: * This function takes two void pointers in its signature, but you will pass in 
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testcompareWordData.c:void testcompareWordData() {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testcompareWordData.c:int main( void ) {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/README:	void foobar( int * a, int * b ) { 
+/home/linux/ieng6/cs30x/cs30xgs/pa3/printPlot.c: * Function Prototype:  void buildPlot( char plotArr[PLOT_ROWS][PLOT_COLS],
+/home/linux/ieng6/cs30x/cs30xgs/pa3/printPlot.c:void printPlot( char plotArr[PLOT_ROWS][PLOT_COLS], unsigned int minCount,
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testprintPlot.c: * int printPlot void printPlot( char plotArr[PLOT_ROWS][PLOT_COLS], unsigned 
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testprintPlot.c:void testprintPlot() {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testprintPlot.c:int main( void ) {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/printData.c: * Function Prototype: void printData( const wordData_t * word );
+/home/linux/ieng6/cs30x/cs30xgs/pa3/printData.c:void printData( const wordData_t * word ){
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testprintData.c: * int printData void printData( char plotArr[PLOT_ROWS][PLOT_COLS], unsigned 
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testprintData.c:void testprintData() {
+/home/linux/ieng6/cs30x/cs30xgs/pa3/testprintData.c:int main( void ) {

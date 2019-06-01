@@ -44,12 +44,12 @@ void testprocessArgs() {
   // no flags 
   memset( &info, 0, sizeof(argInfo_t) );
   argc = 3;
-  char * argv1[] = { "./exe", "pattern", "file" };
+  char * argv1[] = { "./exe", "-e", "abc*" };
   optind = 0;
   
   TEST( processArgs( &info, argc, argv1 ) == 0 );
   TEST( info.flags != (ARG_MULTI_FILE));
-  TEST( optind == 2 );
+  TEST( optind == 3 );
 
   memset( &info, 0, sizeof(argInfo_t) );
   argc = 8;
@@ -109,13 +109,13 @@ void testprocessArgs() {
   TEST( optind == 2);
 
   memset( &info, 0, sizeof(argInfo_t) );
-  argc = 0;
-  char * argv8[] = {""};
+  argc = 3;
+  char * argv8[] = {"./mygrep", "file", "-e"};
   optind = 0;
 
-  TEST( processArgs( &info, argc, argv8 ) == 0 );
+  TEST( processArgs( &info, argc, argv8 ) == -1 );
   TEST( info.flags == 0 );
-  TEST( optind == 1 );
+  TEST( optind == 3 );
   
 }
 

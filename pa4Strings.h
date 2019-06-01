@@ -1,8 +1,8 @@
 /*
  * Filename: pa4Strings.h
- * Author: TODO
- * UserId: TODO
- * Date: TODO
+ * Author: Matt Roth 
+ * UserId: cs30xgs 
+ * Date: June 2nd, 2019
  * Sources of help: Given.
  */
 

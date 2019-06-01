@@ -2,7 +2,7 @@
  * Filename: openFile.c
  * Author: Matt Roth
  * UserId: cs30xgs
- * Date: TODO
+ * Date: June 2nd, 2019
  * Sources of help: textbook, lecture notes, discussion notes, cse 30 website.
  */
 
@@ -20,7 +20,7 @@
 /*
  * Function Name: openFile()
  * Function Prototype: FILE * openFile( const char * filename ); 
- * Description: Opens filenameso that it can be read. If the filename is "-", 
+ * Description: Opens filename so that it can be read. If the filename is "-", 
  *              redirect to stdin instead.  
  * Parameters:  filename - the file to be opened.
  *
@@ -59,13 +59,14 @@ FILE * openFile( const char * filename ) {
   }
 
   // Open the file 
-  fp = fopen( filename, READ );
+  fp = fopen( filename, STR_OPEN_READ );
 
   // Check if the file could not be opened 
   if( errno != 0 || fp == NULL) {
     fprintf( stderr, STR_ERR_OPEN_FILE, filename, strerror(errno));
     return NULL;
   }
-  // return the opened file 
+
+  // Return the opened file 
   return fp;  
 }

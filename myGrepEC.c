@@ -1,5 +1,5 @@
 /*
- * Filename: mygrep.c
+ * Filename: myGrepEC.c
  * Author: Matt Roth
  * UserId: cs30xgs
  * Date: June 2nd, 2019
@@ -30,7 +30,7 @@ int main( int argc, char * argv[] ) {
 
   // the info on Stack to process the arguments and regular expression 
   argInfo_t info;
-  int processArgs_success;
+  int processArgs_success;    // The success of the processArgs function  
 
   // Process and parse all the arguments and pattern data 
   processArgs_success = processArgs( &info, argc, argv );
@@ -47,37 +47,30 @@ int main( int argc, char * argv[] ) {
   }
 
   // Check for the help flag and print to stdout 
-  if( (info.flags & ARG_HELP_FLAG ) == ARG_HELP_FLAG ) {
-    fprintf( stdout, STR_USAGE, argv[0], argv[0]);
+  if( (info.flags & ARG_HELP_FLAG) == ARG_HELP_FLAG ) {
+    fprintf( stdout, STR_EC_USAGE, argv[0], argv[0] );
     return EXIT_SUCCESS;
   }
 
-  // Check if the file name is missing , use stdin for args to count and search 
-  if( !( ( argc-optind ) > 0) ) {
-    if( ( info.flags & ARG_C_FLAG ) == ARG_C_FLAG ) {
-      count( &info, STR_STDIN );
-    } 
-    else {
-      search( &info, STR_STDIN );
+  // Check if the file name is missing 
+  if( argc < THREE_ARGS ) {
+    if( (info.flags & ARG_R_FLAG ) == ARG_R_FLAG ) {
+      recursiveGrep( &info, STR_CURR_DIR);
     }
   } 
 
   else {
 
     // Search of count for all the given filenames from the command line 
-    while( argv[optind] != NULL ) {
-      if( ( info.flags & ARG_C_FLAG ) == ARG_C_FLAG ) {
-        count( &info, argv[optind] );
-      } 
-      else {
-        search( &info, argv[optind] );
-      }
-      // Keep track of the file names 
-      ++optind; 
+    while( argv[optind] != NULL) {
+      recursiveGrep( &info, argv[optind] );  
     }
+    // Keep track of the file names 
+    ++optind; 
   }
 
   // Free allocated memory 
   regfree( &info.pattern );
-  return EXIT_SUCCESS;
+
 }
+

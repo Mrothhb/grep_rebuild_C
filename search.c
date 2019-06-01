@@ -2,7 +2,7 @@
  * Filename: search.c
  * Author: Matt Roth
  * UserId: cs30xgs
- * Date: TODO
+ * Date: June 2nd, 2019
  * Sources of help: textbook, lecture notes, discussion notes, cse 30 website.
  */
 

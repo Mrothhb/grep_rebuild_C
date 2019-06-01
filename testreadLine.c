@@ -34,25 +34,26 @@ void testreadLine() {
   str = readLine( fp );
   TEST( strcmp( string, str ) == 0);
   fclose(fp);
-
-  fp = fopen( "text.txt", "r");
-  str = readLine( fp );
-  TEST( str == NULL );
-  
+  free( str );
+ 
   fp = fopen( "textempty.txt", "r");
   str = readLine( fp );
   TEST( strcmp(str, empty) == 0 );
   fclose(fp);
+  free( str );
 
   fp = fopen( "longstring.txt", "r");
   str = readLine( fp );
   TEST( strcmp(str, longstr) == 0);
   fclose(fp);
+  free( str );
 
   fp = fopen( "textempty.txt", "r");
   str = readLine( fp );
   TEST( strcmp(str, empty) == 0);
   fclose(fp);
+
+  free( str );
 
  }
 

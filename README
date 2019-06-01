@@ -1,0 +1,141 @@
+/*
+ * Filename: README
+ * Author: Matt Roth 
+ * Userid: cs30xgs
+ * Date: June 2nd, 2019
+ * Sources of help: Harris Textbook, lecture notes, discussion notes, website
+ */
+
+================================================================================
+				[  DESCRIPTION  ]				
+================================================================================
+
+This program is called mygrep that will function very similarly to the
+real Unix command grep. This program will search for a pattern in a list of 
+files and print each line that matches the pattern.
+The program will take arguments from the command line and parse them accordingly
+to execute specific variations of the search pattern. To see a list of commands
+to use within the program the user can type ./mygrep --help in the terminal upon
+initial use. The program will also take various flags at the command line that 
+will determine specific behavior of the mygrep function. 
+Using Cntrl D will exit the progam at any time. 
+
+The ./mygrepEC function will add an extra specification to allow the user to 
+recursively search through a directory and "grep" on the contents within the
+directory. 
+
+================================================================================
+				[  COMPILATION  ]
+================================================================================
+
+Compilation is made easy through the use of the Make utility. A file included
+with the source called Makefile specifies how to derive the target program.
+
+To compile the program, simply do the following in a Linux terminal:
+
+	$ make 
+
+If generating new .o files for execution use the following command:
+
+	$ make new 
+
+	or
+
+	$ make clean 
+
+To run the program after make has finished, type the following:
+
+	$ ./mygrep [OPTIONS] [PATTERN] [FILENAME] 
+	$ ./mygrepEC -R [OPTIONS] [ PATTERN ] [FILENAME] ... 
+
+================================================================================
+				[ SAMPLE OUTPUT ]
+================================================================================
+
+An example of normal output... (on stdout)
+
+$ ./mygrep -e pattern sample.txt
+  Am I koo-koo-kachoo, or is this plane flying in an insect-like pattern?
+
+$ ./mygrepEC -R ~/pa4/ -i -c -e void
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//Makefile:0
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//pa4.h:0
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//pa4Strings.h:0
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//test.h:1
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//testprocessArgs.c:2
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//processArgs.c:0
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//testlineShouldBePrinted.c:2
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//testreadLine.c:2
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//lineMatchesRegex.s:0
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//mygrepEC.c:0
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//lineShouldBePrinted.c:0
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//testlineMatchesRegex.c:2
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//search.c:0
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//mygrep.c:0
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//readLine.c:0
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//openFile.c:0
+  /home/linux/ieng6/cs30x/cs30xgs/pa4//count.c:0
+
+Examples of abnormal output... (on stderr)
+
+$ ./mygrep
+
+  Usage: ./mygrep [OPTION]... PATTERN [FILE]...
+  Try './mygrep --help' for more information.
+ 
+================================================================================
+				[    TESTING    ]
+================================================================================
+
+I tested my program by comparing its output against the mygreptest solution 
+contained in the public directory.
+
+Some specific test cases I tried on the executable:
+
+  * Invalid flags -k, -m etc.
+  * Invalid amount of arguments
+  * Missing filename
+  * Missing pattern 
+  * Attempt to open a file or directoy that doesn't exist
+  * mygrep on a directory  
+
+================================================================================
+				[   QUESTIONS   ]
+================================================================================
+
+[Vim]
+
+1.  Q: How would you replace all occurrences of the word "early" with "often" 
+       in Vim?
+
+    A: :%s/\<early\>/often/g 
+
+[Unix]
+
+2.  Q: What is the difference between redirecting output with > versus | ?
+
+    A: The ( > ) indicates to the command line that we would like the program
+       to redirect the output to a file instead of printed to the console. The 
+       | command is intended for redirecting the program output to be input to
+       another program. 
+
+[C]
+
+3.  Q: What are the differences between malloc, calloc, and realloc?
+    
+    A: malloc dynamically allocates memory from the heap and doesnt zero 
+       initialize, whereas calloc is essentially the same as malloc and does
+       zero initialize. Realloc will dynamically allocate memory from the 
+       indicated pointer in memory at the specified location, expanding the 
+       memory at a specified size and amount on the next contiguos block of 
+       available memory. All three fucntions will take a size as an argument,
+       and return a pointer to the location in memory that has been allocated.
+
+[Academic Integrity]
+
+4.  Q: The core values of the Academic Integrity Office are: respect, 
+       responsibility, trustworthiness, fairness, honesty, and courage. 
+       What are three of your own core values and why are they important to you 
+       in excelling with integrity?
+
+    A:  

@@ -30,7 +30,7 @@ char * readLine( FILE * inputFile ) {
 
   // create a buffer and allocate memory to the empty string 
   char buffer[LINE_BUFFER_SIZE];
-  char * str = calloc( 0, sizeof( char ));
+  char * str = calloc( 1, sizeof( char ));
   int end_loop = 0;
 
   if( inputFile == NULL ){
@@ -42,6 +42,7 @@ char * readLine( FILE * inputFile ) {
 
     // Read one line at a time, and exit once EOF is reached     
     if( fgets( buffer, LINE_BUFFER_SIZE, inputFile ) == NULL ){
+      free ( str );
       return NULL;
     }  
 
@@ -58,7 +59,7 @@ char * readLine( FILE * inputFile ) {
     int str_len = strlen( str );
 
     // Allocate space for the buffer into the string 
-    char * temp_str  = realloc( str, str_len +(LINE_BUFFER_SIZE)*sizeof(char));
+    char * temp_str  = realloc( str, str_len + (LINE_BUFFER_SIZE)*sizeof(char));
 
     if( temp_str == NULL ) {
       // Free the pointer if the allocation failed 
@@ -68,7 +69,7 @@ char * readLine( FILE * inputFile ) {
     }  
 
     // Concatenate the buffer onto the string 
-    strncat(temp_str, buffer, str_len + (LINE_BUFFER_SIZE + 1) );
+    strncat(temp_str, buffer, str_len + (LINE_BUFFER_SIZE) );
     str = temp_str; 
 
     if( end_loop == 1 ) {

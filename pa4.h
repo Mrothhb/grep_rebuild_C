@@ -2,7 +2,7 @@
  * Filename: pa4.h
  * Author: Matt Roth
  * UserId: cs30xgs
- * Date: TODO
+ * Date: June 2nd, 2019
  * Sources of help: Given.
  */
 #ifndef PA4_H
@@ -35,7 +35,7 @@
 #define TWO_ARGS 2
 #define THREE_ARGS 3
 #define EMPTY_STR ""
-#define READ "r"
+#define DEFAULT_DATA_DIR "/home/linux/ieng6/cs30x/public/pa4/"
 
 #define PATTERN_LONG "regexp" 
 #define IGNORE_CASE_LONG "ignore-case"
