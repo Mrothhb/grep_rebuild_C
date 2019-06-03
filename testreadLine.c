@@ -2,7 +2,7 @@
  * Filename: testreadLine.c
  * Author: Matt Roth
  * UserId: cs30xgs
- * Date: TODO
+ * Date: June 2nd, 2019
  * Sources of help: text book, cse 30 website, lecture notes, discussion notes.
  */
 

@@ -1,16 +1,14 @@
 /*
- * Filename: myGrepEC.c
+ * Filename: mygrepEC.c
  * Author: Matt Roth
  * UserId: cs30xgs
  * Date: June 2nd, 2019
  * Sources of help: Textbook, cse30 website, lecture notes, discussion notes.
  */
 
-#include <stdio.h>
 #include "pa4.h"
 #include "pa4Strings.h"
 #include <string.h>
-#include <stdlib.h>
 #include <getopt.h>
 
 /*
@@ -28,8 +26,7 @@
  */
 int main( int argc, char * argv[] ) {
 
-  // the info on Stack to process the arguments and regular expression 
-  argInfo_t info;
+  argInfo_t info;               // argInfo_t on stack for regex pattern/flags 
   int processArgs_success;      // Success of the processArgs function call 
 
   // Process and parse all the arguments and pattern data 
@@ -59,6 +56,7 @@ int main( int argc, char * argv[] ) {
     }
 
     else {
+      // Check for the count flag
       if( (info.flags & ARG_C_FLAG) == ARG_C_FLAG ) {
         count( &info, STR_STDIN );
       } else {
@@ -73,7 +71,9 @@ int main( int argc, char * argv[] ) {
       if( (info.flags & ARG_R_FLAG ) == ARG_R_FLAG) {
 
         recursiveGrep( &info, argv[optind] );
-      } else {  
+      }
+      // Call grep as normal on the file 
+      else {  
         if( (info.flags & ARG_C_FLAG) == ARG_C_FLAG ) {
           count( &info, argv[optind] );
         } else {

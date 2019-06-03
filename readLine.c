@@ -6,8 +6,6 @@
  * Sources of help: textbook, lecture notes, discussion notes, cse 30 website.
  */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "pa4.h"
 #include "pa4Strings.h"
 #include <string.h>
@@ -19,7 +17,7 @@
  *              or when it hits the end-of-file (EOF).  
  * Parameters:  inputFile - The file to read input from.
  *
- * Side Effects: None.
+ * Side Effects: The file data is read one line at a time into a string.
  * Error Conditions: Reached EOF while strng is empty , or memory allocation 
  *                   fails.
  *                    
@@ -28,10 +26,9 @@
  */
 char * readLine( FILE * inputFile ) {
 
-  // create a buffer and allocate memory to the empty string 
-  char buffer[LINE_BUFFER_SIZE];
-  char * str = calloc( 1, sizeof( char ));
-  int end_loop = 0;
+  char buffer[LINE_BUFFER_SIZE];              // Buffer from reading file input
+  char * str = calloc( 1, sizeof( char ));    // Dynamically allocated empty str
+  int end_loop = 0;                           // The condition to end the loop
 
   if( inputFile == NULL ){
     return NULL;

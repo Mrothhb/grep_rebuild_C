@@ -1,54 +1,514 @@
-/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:int compareWordData( const void * w1, const void * w2 );
-/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:void createWordData( wordData_t * wordData, const char * wordStr,
-/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:void buildPlot( char plotArr[PLOT_ROWS][PLOT_COLS], const wordData_t * word,
-/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:void printPlot( char plotArr[PLOT_ROWS][PLOT_COLS], unsigned int minCount,
-/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:void printData( const wordData_t * word );
-/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:void interactiveLoop( const wordTable_t * table );
-/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:int shouldPrompt( void );
-/home/linux/ieng6/cs30x/cs30xgs/pa3/pa3.h:void printTable( const wordTable_t * table );
-/home/linux/ieng6/cs30x/cs30xgs/pa3/printTable.c: * Function Prototype: void printWordDataPtr(tableSlot_t * slot);
-/home/linux/ieng6/cs30x/cs30xgs/pa3/printTable.c:static void printWordDataPtr(tableSlot_t * slot) {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/printTable.c: * Function Prototype: void printTable(wordTable_t * table);
-/home/linux/ieng6/cs30x/cs30xgs/pa3/printTable.c:void printTable(const wordTable_t * table) {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/test.h:#define TEST(EX) (void)((fprintf( stderr, "(%s:%d) %s:", __FILE__, __LINE__,\
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testaddWordCount.c:void testaddWordCount() {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testaddWordCount.c:int main( void ) {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/shouldPrompt.c: * Function Prototype: int shouldPrompt( void );
-/home/linux/ieng6/cs30x/cs30xgs/pa3/shouldPrompt.c:int shouldPrompt( void ) {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testcomputeHash.c:void testcomputeHash() {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testcomputeHash.c:int main( void ) {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testcreateWordData.c:void testcreateWordData() {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testcreateWordData.c:int main( void ) {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/buildPlot.c: * Function Prototype:  void buildPlot( char plotArr[PLOT_ROWS][PLOT_COLS],
-/home/linux/ieng6/cs30x/cs30xgs/pa3/buildPlot.c:void buildPlot( char plotArr[PLOT_ROWS][PLOT_COLS], const wordData_t * word, 
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testfindSlotIndex.c:void testfindSlotIndex() {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testfindSlotIndex.c:int main( void ) {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testbuildPlot.c:void testbuildPlot() {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testbuildPlot.c:int main( void ) {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/createWordData.c: * Function Prototype:  void createWordData( wordData_t * wordData, const char 
-/home/linux/ieng6/cs30x/cs30xgs/pa3/createWordData.c:void createWordData( wordData_t * wordData, const char * wordStr,
-/home/linux/ieng6/cs30x/cs30xgs/pa3/createWordData.c:  // If void pointer or wordStr is Null return 
-/home/linux/ieng6/cs30x/cs30xgs/pa3/interactiveLoop.c: * Function Prototype: void interactiveLoop( const wordTable_t * table );
-/home/linux/ieng6/cs30x/cs30xgs/pa3/interactiveLoop.c:void interactiveLoop( const wordTable_t * table ) {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testbuildWordTable.c:void testbuildWordTable() {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testbuildWordTable.c:int main( void ) {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/compareWordData.s: * Function Prototype: int compareWordData( const void * w1, const void * w2 );
-/home/linux/ieng6/cs30x/cs30xgs/pa3/compareWordData.s: * Description: This function takes two void pointers in its signature, but your
-/home/linux/ieng6/cs30x/cs30xgs/pa3/compareWordData.s: * Parameters: w1 - The first void pointer.
-/home/linux/ieng6/cs30x/cs30xgs/pa3/compareWordData.s: *	       w2 - The second void pointer.	
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testmyURem.c:void testmyURem() {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testmyURem.c:int main( void ) {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testcompareWordData.c: * This function takes two void pointers in its signature, but you will pass in 
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testcompareWordData.c:void testcompareWordData() {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testcompareWordData.c:int main( void ) {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/README:	void foobar( int * a, int * b ) { 
-/home/linux/ieng6/cs30x/cs30xgs/pa3/printPlot.c: * Function Prototype:  void buildPlot( char plotArr[PLOT_ROWS][PLOT_COLS],
-/home/linux/ieng6/cs30x/cs30xgs/pa3/printPlot.c:void printPlot( char plotArr[PLOT_ROWS][PLOT_COLS], unsigned int minCount,
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testprintPlot.c: * int printPlot void printPlot( char plotArr[PLOT_ROWS][PLOT_COLS], unsigned 
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testprintPlot.c:void testprintPlot() {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testprintPlot.c:int main( void ) {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/printData.c: * Function Prototype: void printData( const wordData_t * word );
-/home/linux/ieng6/cs30x/cs30xgs/pa3/printData.c:void printData( const wordData_t * word ){
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testprintData.c: * int printData void printData( char plotArr[PLOT_ROWS][PLOT_COLS], unsigned 
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testprintData.c:void testprintData() {
-/home/linux/ieng6/cs30x/cs30xgs/pa3/testprintData.c:int main( void ) {
+./Makefile:# If LINE_BUFFER_SIZE provided, set it for the preprocessor.
+./Makefile:# This calls the above function on each test file target, generating rules
+./pa4.h:  // Which of -i, -v, -c, -n, --help were set? Are there multiple files?
+./testprocessArgs.c: * Processes arguments passed into the executable.
+./testprocessArgs.c: *  - REGEX_ERROR if compiling the regular expression fails,
+./testprocessArgs.c: *  - otherwise returns 0.
+./processArgs.c: * The struct for holding the options that will be parsed from the command
+./processArgs.c: *              representing which flags were set in the command line arguments.
+./processArgs.c: * Parameters:  info -  the argInfor_t struct.
+./processArgs.c: *              argc -  the argument count.
+./processArgs.c: *              argv[] - the array of string arguments.
+./processArgs.c: *               otherwise 0.
+./processArgs.c:  info->flags = 0;                          // Initialize the flags to 0
+./processArgs.c:  int rc = 0;                              // The success of the regcomp
+./processArgs.c:  int pattern_flagged = 0;                 // If the -e flag was used
+./processArgs.c:  // Parse the flags form the command line 
+./processArgs.c:      // If the flag was not recognized 
+./processArgs.c:    // If there is no pattern in the argument 
+./processArgs.c:    // use the argument provided in the command line 
+./processArgs.c:  // Check for multiple files on the command line 
+./testreadLine.c:  const char * longstr = "thwejhtwetheuthwejrthejthkejrhfrklehtkljhtkjrehtkjew"
+./testreadLine.c:  "htklrehtlkjrwehkjlhtkjlerthrekjtherkljthwrekjthwkjrelhtwlkjehjthrekjwhtkjwre"
+./lineMatchesRegex.s:	.equ	PARAM_SPACE, 8		@ allocate space for the parameters
+./lineMatchesRegex.s: * Description: Checks if a line matches the regex pattern by calling regexec.
+./lineMatchesRegex.s: * Parameters: pattern - the regex pattern to check for matching pattern.
+./lineMatchesRegex.s: *	       line    - the line to search for a match in regex.	
+./lineMatchesRegex.s: * Return Value: 1 if the lines matches and 0 otherwise. 
+./lineMatchesRegex.s: *	r0 - arg 1 -- the pattern, and the argument to regexc().
+./lineMatchesRegex.s: *	r1 - arg 2 -- the line and the argument to regexc.
+./lineMatchesRegex.s: *	r2 - local var -- the third argument to regexec.
+./lineMatchesRegex.s: *	r3 - local var -- the fourth argument to regexec.
+./lineMatchesRegex.s:	sub	sp, sp, PARAM_SPACE	@ allocate space for the formal params 
+./lineMatchesRegex.s:	str	r3, [sp]		@ store the 5th arg on the stack
+./lineMatchesRegex.s:	mov	r2, 0			@ move 0 into the third argument
+./lineMatchesRegex.s:	add	sp, sp, PARAM_SPACE	@ deallocate the 5th argument 
+./lineMatchesRegex.s:	cmp	r0, 0			@ compare the retrun value to 0
+./lineMatchesRegex.s:	mov	r0, 1			@ move 1 into the return value 
+./lineMatchesRegex.s:	b	end			@ return the value 
+./lineMatchesRegex.s:@ the line did not match
+./lineMatchesRegex.s:	mov	r0, 0			@ move 1 into the return value
+./lineShouldBePrinted.c: * Parameters:  line -  the line to print.
+./lineShouldBePrinted.c: *              info -  the info struct to search for the match.
+./lineShouldBePrinted.c: * Return Value: 1 if the line should be printed, else 0.
+./lineShouldBePrinted.c:  // set the "boolean" for line match 
+./lineShouldBePrinted.c:  // Check if the -v flag has been set
+./lineShouldBePrinted.c:    // Check if the line matches in the regexec
+./lineShouldBePrinted.c:  // Check for matching lines when the -v flag is not set 
+./lineShouldBePrinted.c:    // The line does not match and the -v flag was not set 
+./search.c: * Description: Opens filenameand prints out all lines that match the regex 
+./search.c: * Parameters: info - The struct containing the regex and flags.
+./search.c: *             filename - the file to search.
+./search.c:  FILE * fp;            // File pointer the file to be opened 
+./search.c:  int line_num = 1;     // Keep track of the line number
+./search.c:  // Open the file 
+./search.c:  // If the file was unsuccessfuly opened return -1
+./search.c:  // Continue to read the lines in the file until the terminate flag is set 
+./search.c:    // Get the next line in the file 
+./search.c:    // Check for NULL ( the last string from readLine )
+./search.c:      // Determine if the line should be printed to stdout 
+./search.c:        // Check for the -n flag, and print the line number  
+./search.c:        // print the line to stdout, free the string, and increment the linenum 
+./search.c:    // Keep track of the line number and free the allocated memory 
+./search.c:  // Close the file and exit 
+./mygrep.c: * Description: This is the main driver of your program. Its main tasks are to
+./mygrep.c: *              parse any flags and arguments that are passed in, and to run the
+./mygrep.c: *              functionality of the grepcommand.
+./mygrep.c: * Parameters: argc is the argument counter, argv is each argument from the 
+./mygrep.c: * Side Effects: Run the program for mygrep. 
+./mygrep.c: * Error Conditions: The arguments could not be processed, or the regular 
+./mygrep.c:  argInfo_t info;             // The info on the stack for the flags and regex
+./mygrep.c:  int processArgs_success;   // The success of the function call to processArgs
+./mygrep.c:  // Process and parse all the arguments and pattern data 
+./mygrep.c:  // Check for an error in the expression
+./mygrep.c:  // Check for the help flag and print to stdout 
+./mygrep.c:  // Check if the file name is missing, use stdin for args to count and search 
+./mygrep.c:    // Search the file with stdin  
+./mygrep.c:    // Search of count for all the given filenames from the command line 
+./mygrep.c:      // Search the filwe with the filename from command line 
+./mygrep.c:      // Keep track of the file names 
+./readLine.c: *              or when it hits the end-of-file (EOF).  
+./readLine.c: *               containing a line from the file.
+./readLine.c:  // create a buffer and allocate memory to the empty string 
+./readLine.c:  // Read each line in the file 
+./readLine.c:    // Check for the newline character 
+./readLine.c:    // set the null char to replace the newline char 
+./readLine.c:    // Get the length of the buffer 
+./readLine.c:    // Allocate space for the buffer into the string 
+./readLine.c:      // Free the pointer if the allocation failed 
+./readLine.c:    // Concatenate the buffer onto the string 
+./readLine.c:  // Check if the string is still NULL    
+./readLine.c:  // return the string 
+./openFile.c: * Description: Opens filename so that it can be read. If the filename is "-", 
+./openFile.c: * Parameters:  filename - the file to be opened.
+./openFile.c: * Side Effects: The file is opened and a pointer to the file is returned.
+./openFile.c: * Return Value: NULL if error, else the file pointer.
+./openFile.c:  // The stat struct to check the filename
+./openFile.c:  struct stat buffer;       // The stat struct to check the filename       
+./openFile.c:  int status;              // the success of stat()
+./openFile.c:  // Stat the file 
+./openFile.c:  // Check if we can stat the file 
+./openFile.c:  // Check if the file is a directory 
+./openFile.c:  // Open the file 
+./openFile.c:  // Check if the file could not be opened 
+./openFile.c:  // Return the opened file 
+./count.c: * Description: Counts the number of lines in filename that match the pattern 
+./count.c: * Parameters: info - The struct containing the regex and flags.
+./count.c: *             filename - the file to search.
+./count.c: * Side Effects: The count of the matching lines are printed to stdout.
+./count.c:  int count = 0;  // Hold the count of each occurrence 
+./count.c:  // Open the file 
+./count.c:  // If the file was unsuccessfuly opened return -1
+./count.c:  // Continue to read the lines in the file until the terminate flag is set 
+./count.c:    // Get the next line in the file 
+./count.c:    // Check for the NULL string ( last line read in from readLine )
+./count.c:      // Collect the count of the lines that match
+./count.c:    // Deallocate the memory 
+./count.c:  // print the count to stdout, free the string
+./count.c:  // Close the file and exit 
+./longstring.txt:thwejhtwetheuthwejrthejthkejrhfrklehtkljhtkjrehtkjewhtklrehtlkjrwehkjlhtkjlerthrekjtherkljthwrekjthwkjrelhtwlkjehjthrekjwhtkjwrehtjkrwehtkwjerhtrekjhtrkjwehtwlrekjhtlkwejtlkjwrehltwrekjhtwekjhtjewkhtkjrwethrjwekhtrkjwehkjthjwekhrwejkhtwejkhtwjrekhtjkj
+./recursiveGrepEC.c: * Description: Recursively greps on path, which can refer to either a regular
+./recursiveGrepEC.c: * Parameters: info - The struct containing the regex and flags.
+./recursiveGrepEC.c: *             path - the path to recurse on .
+./recursiveGrepEC.c: * Error Conditions: We can't stat the file.
+./recursiveGrepEC.c:  struct stat buffer;       // Create a struct stat to stat the file 
+./recursiveGrepEC.c:  int status = 0;          // Check the status of the stat 
+./recursiveGrepEC.c:  // Check if the path is from stdin 
+./recursiveGrepEC.c:    // Check if we can stat the file 
+./recursiveGrepEC.c:    // Check if the file is a directory 
+./recursiveGrepEC.c:    // Check if the count flag has been set 
+./recursiveGrepEC.c:    // Search the path for the specified pattern 
+./recursiveGrepEC.c:  // Check if the count flag was set 
+./recursiveGrepEC.c:  // Search the path for the pattern
+./testfile.txt:this has another pattern
+./myGrepEC.c: * Description: This is the main driver of your program. Its main tasks are to
+./myGrepEC.c: *              parse any flags and arguments that are passed in, and to run the
+./myGrepEC.c: *              functionality of the grepcommand.
+./myGrepEC.c: * Parameters: argc is the argument counter, argv is each argument from the 
+./myGrepEC.c: * Side Effects: Run the program for mygrep. 
+./myGrepEC.c: * Error Conditions: The arguments could not be processed, or the regular 
+./myGrepEC.c:  // the info on Stack to process the arguments and regular expression 
+./myGrepEC.c:  int processArgs_success;    // The success of the processArgs function  
+./myGrepEC.c:  // Process and parse all the arguments and pattern data 
+./myGrepEC.c:  // Check for an error in the expression
+./myGrepEC.c:  // Check for the help flag and print to stdout 
+./myGrepEC.c:  // Check if the file name is missing 
+./myGrepEC.c:    // Search of count for all the given filenames from the command line 
+./myGrepEC.c:    // Keep track of the file names 
+./recursiveGrepDirEC.c: * Parameters: info - The struct containing the regex and flags.
+./recursiveGrepDirEC.c: *             dirpath - the path to recurse on.
+./recursiveGrepDirEC.c:  // Set the multi file flag 
+./recursiveGrepDirEC.c:  // Open the directory with the path     
+./recursiveGrepDirEC.c:  // Check if the directory could not be opened 
+./recursiveGrepDirEC.c:  // Recursively call grep on each file/directory within the directory 
+./recursiveGrepDirEC.c:    // Build the path for each file/dir within the directory 
+./recursiveGrepDirEC.c:    // Exclude all the directories containing ".", ".." or starting with "."
+./recursiveGrepDirEC.c:    // Call grep on the path 
+./recursiveGrepDirEC.c:  // Close the directory and return 
+./testreadLine.o:ELFååëåëåëåthrekjtherkljthwrekjthwkjrelhtwlkjehjthrekjwhtkjwrehtjkrwehtkwjerhtrekjhtrkjwehtwlrekjhtlkwejtlkjwrehltwrekjhtwekjhtjewkhtkjrwethrjwekhtrkjwehkjthjwekhrwejkhtwejkhtwjrekhtjkj32mPASSED[0m
+./testreadLine:ELFNUº•“>ùÿ¼ Ï	ý}íòæõ^–“.N=öE>¯teû¼å -å€½ßÿÿë0 ã@-é3ÿ/á@½èÛÿÿêãåëåëåëå ã0åâ áÂÿÿêáljhtkjrehtkjewhtklrehtlkjrwehkjlhtkjlerthrekjtherkljthwrekjthwkjrelhtwlkjehjthrekjwhtkjwrehtjkrwehtkwjerhtrekjhtrkjwehtwlrekjhtlkwejtlkjwrehltwrekjhtwekjhtjewkhtkjrwethrjwekhtrkjwehkjthjwekhrwejkhtwejkhtwjrekhtjkj%d) %s:	Memory limit exceeded.
+./sample.txt:According to all known laws of aviation, there is no way a bee should be able to fly.
+./sample.txt:Its wings are too small to get its fat little body off the ground.
+./sample.txt:Use the stairs, Your father paid good money for those.
+./sample.txt:Here's the graduate.
+./sample.txt:Barry, I told you, stop flying in the house!
+./sample.txt:You going to the funeral?
+./sample.txt:Such a hothead.
+./sample.txt:I guess he could have just gotten out of the way.
+./sample.txt:Boy, quite a bit of pomp under the circumstances.
+./sample.txt:Keep your hands and antennas inside the tram at all times.
+./sample.txt:Welcome to Honex, a division of Honesco and a part of the Hexagon Group.
+./sample.txt:We know that you, as a bee, have worked your whole life to get to the point where you can work for your whole life.
+./sample.txt:Honey begins when our valiant Pollen Jocks bring the nectar to The Hive.
+./sample.txt:Here we have our latest advancement, the Krelman.
+./sample.txt:Can anyone work on the Krelman?
+./sample.txt:But choose carefully because you'll stay in the job you pick for the rest of your life.
+./sample.txt:The same job the rest of your life? I didn't know that.
+./sample.txt:What's the difference?
+./sample.txt:"What's the difference?"
+./sample.txt:But, Adam, how could they never have told us that?
+./sample.txt:We're the most perfectly functioning society on Earth.
+./sample.txt:Please clear the gate. Royal Nectar Force on approach.
+./sample.txt:I've never seen them this close.
+./sample.txt:I wonder where they were.
+./sample.txt:Perhaps. Unless you're wearing it and the ladies see you wearing it.
+./sample.txt:Aren't they our cousins too?
+./sample.txt:Look at these two.
+./sample.txt:Let's have fun with them.
+./sample.txt:He had a paw on my throat, and with the other, he was slapping me!
+./sample.txt:Trying to alert the authorities.
+./sample.txt:A little gusty out there today, wasn't it, comrades?
+./sample.txt:Well, there's a lot of choices.
+./sample.txt:Do you ever get bored doing the same job every day?
+./sample.txt:You know, Dad, the more I think about it,
+./sample.txt:maybe the honey field just isn't right for me.
+./sample.txt:You're not funny! You're going into honey. Our son, the stirrer!
+./sample.txt:Wait till you see the sticks I have.
+./sample.txt:Today's the day.
+./sample.txt:Come on! All the good jobs will be gone.
+./sample.txt:One of them's yours! Congratulations!
+./sample.txt:Step to the side.
+./sample.txt:Restroom attendant's open, not for the reason you think.
+./sample.txt:Any chance of getting the Krelman?
+./sample.txt:I'm sorry, the Krelman just closed out.
+./sample.txt:A bee died. Makes an opening. See? He's dead. Another dead one.
+./sample.txt:Dead from the neck up. Dead from the neck down. That's life!
+./sample.txt:All right, we've got the sunflower patch in quadrant nine...
+./sample.txt:Out there.
+./sample.txt:I have to, before I go to work for the rest of my life.
+./sample.txt:Another call coming in.
+./sample.txt:If anyone's feeling brave, there's a Korean deli on 83rd that gets their roses today.
+./sample.txt:Isn't that the kid we saw yesterday?
+./sample.txt:Stand to the side, kid.
+./sample.txt:I pick up some pollen here, sprinkle it over here. Maybe a dash over there, a pinch on that one.
+./sample.txt:Wait. One of these flowers seems to be on the move.
+./sample.txt:That was on the line!
+./sample.txt:This is the coolest. What is it?
+./sample.txt:Candy-brain, get off there!
+./sample.txt:I don't think these are flowers.
+./sample.txt:There's a bee in the car!
+./sample.txt:Wow... the tension level out here is unbelievable.
+./sample.txt:Ken, could you close the window please?
+./sample.txt:Ken, could you close the window please?
+./sample.txt:No wonder we shouldn't talk to them. They're out of their minds.
+./sample.txt:When I leave a job interview, they're flabbergasted, can't believe what I say.
+./sample.txt:There's the sun. Maybe that's a way out.
+./sample.txt:I don't remember the sun having a big 75 on it.
+./sample.txt:You know I'm allergic to them! This thing could kill me!
+./sample.txt:You could put carob chips on there.
+./sample.txt:I am. And I'm not supposed to be doing this, but they were all trying to kill me.
+./sample.txt:I'm talking to a bee. And the bee is talking to me!
+./sample.txt:He's making the tie in the cab as they're flying up Madison.
+./sample.txt:He finally gets there.
+./sample.txt:He runs up the steps into the church.
+./sample.txt:That's the kind of stuff we do.
+./sample.txt:I want to do my part for The Hive, but I can't do it the way they want.
+./sample.txt:Anyway, if you look... There's my hive right there. See it?
+./sample.txt:Yes! I'm right off the Turtle Pond!
+./sample.txt:No way! I know that area. I lost a toe ring there once.
+./sample.txt:Why do girls put rings on their toes?
+./sample.txt:Thanks for the coffee.
+./sample.txt:Sorry I couldn't finish it. If I did, I'd be up the rest of my life.
+./sample.txt:All right. Well, then... I guess I'll see you around. Or not.
+./sample.txt:OK, Dave, pull the chute.
+./sample.txt:It was the scariest, happiest moment of my life.
+./sample.txt:What were they like?
+./sample.txt:Do they try and kill you, like on TV?
+./sample.txt:Some of them. But some of them don't.
+./sample.txt:I know it's the hottest thing, with the eight legs and all. I can't get by that face.
+./sample.txt:And that's not what they eat.
+./sample.txt:That's what falls off what they eat!
+./sample.txt:We are not them! We're us.
+./sample.txt:There's us and there's them!
+./sample.txt:Yes, but who can deny the heart that is yearning?
+./sample.txt:There he is. He's in the pool.
+./sample.txt:Barry, come out. Your father's talking to you.
+./sample.txt:To be in the Tournament of Roses, that's every florist's dream!
+./sample.txt:A tournament. Do the roses compete in athletic events?
+./sample.txt:He's not bothering anybody.
+./sample.txt:What in the name of Mighty Hercules is this?
+./sample.txt:And it's on sale?! I'm getting to the bottom of this.
+./sample.txt:I'm getting to the bottom of all of this!
+./sample.txt:Where you getting the sweet stuff? Who's your supplier?
+./sample.txt:You, sir, have crossed the wrong sword!
+./sample.txt:Where is the honey coming from? Tell me where!
+./sample.txt:These faces, they never knew what hit them. And now
+./sample.txt:they're on the road to nowhere!
+./sample.txt:Stick your head out the window!
+./sample.txt:Turn off the radio.
+./sample.txt:Just a row of honey jars, as far as the eye could see.
+./sample.txt:I assume wherever this truck goes is where they're getting it. I mean, that honey's ours.
+./sample.txt:At least you're out in the world. You must meet girls.
+./sample.txt:Mooseblood's about to leave the building! So long, bee!
+./sample.txt:A bee's got a brain the size of a pinhead.
+./sample.txt:Check out the new smoker.
+./sample.txt:Oh, sweet. That's the one you want. The Thomas 3000!
+./sample.txt:Ninety puffs a minute, semi-automatic. Twice the nicotine, all the tar. A couple breaths of this knocks them right out.
+./sample.txt:They make the honey, and we make the money.
+./sample.txt:"They make the honey, and we make the money"?
+./sample.txt:This is your queen? That's a man in women's clothes! That's a drag queen!
+./sample.txt:There's hundreds of them!
+./sample.txt:Do these look like rumors?
+./sample.txt:That's a conspiracy theory. These are obviously doctored photos. How did you get mixed up in this?
+./sample.txt:He has a human girlfriend. And they make out!
+./sample.txt:What right do they have to our honey?
+./sample.txt:Sting them where it really hurts.
+./sample.txt:In the face! The eye!
+./sample.txt:Up the nose? That's a killer.
+./sample.txt:There's only one place you can sting the humans, one place where it matters.
+./sample.txt:With Bob Bumble at the anchor desk. Weather with Storm Stinger. Sports with Buzz Larvi. And Jeanette Chung.
+./sample.txt:A tri-county bee, Barry Benson, intends to sue the human race for stealing our honey, packaging it and profiting from it illegally!
+./sample.txt:Tomorrow night on Bee Larry King, we'll have three former queens here in our studio, discussing their new book, classy Ladies, out this week on Hexagon.
+./sample.txt:Bees have never been afraid to change the world.
+./sample.txt:The bee community is supporting you in this case, which will be the trial of the bee century.
+./sample.txt:You know, they have a Larry King in the human world too.
+./sample.txt:Glasses, quotes on the bottom from the guest even though you just heard 'em.
+./sample.txt:In tennis, you attack at the point of weakness!
+./sample.txt:It was my grandmother, Ken. She's 81.
+./sample.txt:I'm helping him sue the human race.
+./sample.txt:Just one. I try not to use the competition.
+./sample.txt:Bees have good qualities. And it takes my mind off the shop. Instead of flowers, people are giving balloon bouquets now.
+./sample.txt:Am I sure? When I'm done with the humans, they won't be able to say, "Honey, I'm home," without paying a royalty!
+./sample.txt:It's an incredible scene here in downtown Manhattan, where the world anxiously waits, because for the first time in history, we will hear for ourselves if a honeybee can actually speak.
+./sample.txt:I can't believe how many humans don't work during the day.
+./sample.txt:Everybody needs to stay behind the barricade.
+./sample.txt:What's the matter?
+./sample.txt:Well, if it isn't the bee team.
+./sample.txt:Barry Bee Benson v. the Honey Industry is now in session.
+./sample.txt:Mr. Montgomery, you're representing the five food companies collectively?
+./sample.txt:Mr. Benson... you're representing all the bees of the world?
+./sample.txt:Ladies and gentlemen of the jury, my grandmother was a simple woman. Born on a farm, she believed it was man's divine right to benefit from the bounty of nature God put before us.
+./sample.txt:If we lived in the topsy-turvy world Mr. Benson imagines, just think of what would it mean.
+./sample.txt:I would have to negotiate with the silkworm for the elastic in my britches!
+./sample.txt:Ladies and gentlemen, there's no trickery here. I'm just an ordinary bee. Honey's pretty important to me. It's important to all bees. We invented it! We make it. And we protect it with our lives.
+./sample.txt:Unfortunately, there are some people in this room who think they can take it from us 'cause we're the little guys!
+./sample.txt:I wish he'd dress like that all the time. So nice!
+./sample.txt:Yes, they provide beekeepers for our farms.
+./sample.txt:No, you haven't. And so here we have yet another example of bee culture casually stolen by a human for nothing more than a prance-about stage name.
+./sample.txt:I think it was awfully nice of that bear to pitch in like that. I think the jury's on our side.
+./sample.txt:No, I was just late I tried to call, but... the battery.
+./sample.txt:So I hear you're quite a tennis player. I'm not much for the game myself. The ball's a little grabby.
+./sample.txt:That's where I usually sit. Right... there.
+./sample.txt:I know how hard it is to find the right job. We have that in common.
+./sample.txt:Bees have 100 percent employment, but we do jobs like taking the crud out.
+./sample.txt:I'm going to drain the old stinger.
+./sample.txt:I love the smell of flowers.
+./sample.txt:How do you like the smell of flames?!
+./sample.txt:This is pathetic!
+./sample.txt:And he happens to be the nicest bee I've met in a long time!
+./sample.txt:Long time? What are you talking about?! Are there other bugs in your life?
+./sample.txt: No, but there are other things bugging me in life. And you're one of them!
+./sample.txt:I always felt there was some kind of barrier between Ken and me. I couldn't overcome it.
+./sample.txt:Are you OK for the trial?
+./sample.txt:We would like to call Mr. Barry Benson Bee to the stand.
+./sample.txt:Good idea! You can really see why he's considered one of the best lawyers...
+./sample.txt:Don't worry. The only thing I have to do to turn this jury around is to remind them of what they don't like about bees.
+./sample.txt:You got the tweezers?
+./sample.txt:How good? Do you live together?
+./sample.txt:I've seen a bee documentary or two. From what I understand, doesn't your queen give birth to all the bee children?
+./sample.txt:Yes, they are!
+./sample.txt:The venom! The venom is coursing through my veins! I have been felled by a winged beast of destruction! You see? You can't treat them like equals! They're striped savages! Stinging's the only thing they know! It's their way!
+./sample.txt:What Angel of Mercy will come forward to suck the poison from my heaving buttocks?
+./sample.txt:The case of the honeybees versus the human race took a pointed Turn Against the bees yesterday when one of their legal team stung Layton T. Montgomery.
+./sample.txt:Is there much pain?
+./sample.txt:I... I blew the whole case, didn't I?
+./sample.txt:They got it from the cafeteria downstairs, in a tuna sandwich. Look, there's a little celery still on it.
+./sample.txt:I can't explain it. It was all... All adrenaline and then...and then ecstasy!
+./sample.txt:What will the humans do to us if they win?
+./sample.txt:I hear they put the roaches in motels. That doesn't sound so bad.
+./sample.txt:Adam, they check in, but they don't check out!
+./sample.txt:Get back to the court and stall. Stall any way you can.
+./sample.txt:And assuming you've done step correctly, you're ready for the tub.
+./sample.txt:Where is the rest of your team?
+./sample.txt:Your Honor, haven't these ridiculous bugs taken up enough of this court's valuable time? How much longer will we allow these absurd shenanigans to go on?
+./sample.txt:They have presented no compelling evidence to support their charges against my clients, who run legitimate businesses.
+./sample.txt:Where is the evidence?
+./sample.txt:Show me the smoking gun!
+./sample.txt:Living out our lives as honey slaves to the white man?
+./sample.txt:He's playing the species card.
+./sample.txt:Ladies and gentlemen, please, free these bees!
+./sample.txt:Free the bees! Free the bees! Free the bees! Free the bees! Free the bees!
+./sample.txt:The court finds in favor of the bees!
+./sample.txt:All the honey will finally belong to the bees.
+./sample.txt:Now we won't have to work so hard all the time.
+./sample.txt:This is an unholy perversion of the balance of nature, Benson.
+./sample.txt:Barry, how much honey is out there?
+./sample.txt:We've been living the bee way a long time, 27 million years.
+./sample.txt:Then we want back the honey that was ours to begin with, every last drop.
+./sample.txt:We demand an end to the glorification of the bear as anything more than a filthy, smelly, bad-breath stink machine.
+./sample.txt:We're all aware of what they do in the woods.
+./sample.txt:He'll have nauseous for a few hours, then he'll be fine.
+./sample.txt:Can't breathe.
+./sample.txt:Hold it right there! Good.
+./sample.txt:Mr. Buzzwell, we just passed three cups and there's gallons more coming!
+./sample.txt:Adam, you wouldn't believe how much honey was out there.
+./sample.txt:Are they out celebrating?
+./sample.txt:It's the greatest thing in the world! I was excited to be part of making it.
+./sample.txt:I don't understand why they're not happy.
+./sample.txt:I thought their lives would be better!
+./sample.txt:That is not the half of it.
+./sample.txt:I didn't think bees not needing to make honey would affect all these things.
+./sample.txt:It's not just flowers. Fruits, vegetables, they all need bees.
+./sample.txt:That's our whole SAT test right there.
+./sample.txt:Take away produce, that affects the entire animal kingdom.
+./sample.txt:And then, of course...
+./sample.txt:So if there's no more pollination, it could all just go south here, couldn't it?
+./sample.txt:To the final Tournament of Roses parade in Pasadena.
+./sample.txt:They've moved it to this weekend because all the flowers are dying.
+./sample.txt:It's the Last Chance I'll ever have to see it.
+./sample.txt:I know. Me neither.
+./sample.txt:Yes, they are.
+./sample.txt:That's why this is the last parade.
+./sample.txt:I've ruined the planet. I wanted to help you with the flower shop. I've made it worse.
+./sample.txt:But I have another idea, and it's greater than my previous ideas combined.
+./sample.txt:All right, they have the roses, the roses have the pollen.
+./sample.txt:All we gotta do is get what they've got back here with what we've got.
+./sample.txt:Across the nation!
+./sample.txt:Once inside, we just pick the right float.
+./sample.txt:How about The Princess and the Pea?
+./sample.txt:I could be the princess, and you could be the pea!
+./sample.txt:I believe I'm the pea.
+./sample.txt:It goes under the mattresses.
+./sample.txt:Not in this fairy tale, sweetheart.
+./sample.txt:I'm getting the marshal.
+./sample.txt:Once at the airport, there's no stopping us.
+./sample.txt:Has it been in your possession the entire time?
+./sample.txt:Then if we're lucky, we'll have just enough pollen to do the job.
+./sample.txt:Can you believe how lucky we are? We have just enough pollen to do the job!
+./sample.txt:Attention, passengers, this is Captain Scott. We have a bit of bad weather in New York. It looks like we'll experience a couple hours delay.
+./sample.txt:Barry, these are cut flowers with no water. They'll never make it.
+./sample.txt:I gotta get up there and talk to them.
+./sample.txt:Can I get help with the Sky Mall magazine? I'd like to order the talking inflatable nose and ear hair trimmer.
+./sample.txt:Good afternoon, passengers. This is your captain. Would a Miss Vanessa Bloome in 24B please report to the cockpit? And please hurry!
+./sample.txt:One's bald, one's in a boat, they're both unconscious!
+./sample.txt:Is that another bee joke?
+./sample.txt:No one's flying the plane!
+./sample.txt:Where's the pilot?
+./sample.txt:He's unconscious, and so is the copilot.
+./sample.txt:As a matter of fact, there is.
+./sample.txt:From the honey trial?! Oh, great.
+./sample.txt:We have a storm in the area and two individuals at the controls with absolutely no flight experience.
+./sample.txt:"The surface area of the wings and body mass make no sense."
+./sample.txt:Get this on the air!
+./sample.txt:That's why I want to get bees back to working together. That's the bee way! We're not made of Jell-O.
+./sample.txt:Wait, I think we were on autopilot the whole time.
+./sample.txt:Our only chance is if I do what I'd do, you copy me with the wings of the plane!
+./sample.txt:Vanessa, pull yourself together. You have to snap out of it!
+./sample.txt:How is the plane flying?
+./sample.txt:Benson, got any flowers for a happy occasion in there?
+./sample.txt:All right, let's drop this tin can on the blacktop.
+./sample.txt:Bring the nose down.
+./sample.txt:What in the world is on the tarmac?
+./sample.txt:Vanessa, aim for the flower.
+./sample.txt:Cut the engines. We're going in on bee power. Ready, boys?
+./sample.txt:Not that flower! The other one!
+./sample.txt:I'm aiming at the flower!
+./sample.txt:I mean the giant pulsating flower made of millions of bees!
+./sample.txt:This's the only way I know how to fly.
+./sample.txt:Get your nose in there. Don't be afraid. Smell it. Full reverse!
+./sample.txt:Aim for the center!
+./sample.txt:Did you see the giant flower?
+./sample.txt:I saw the flower! That was genius!
+./sample.txt:This runway is covered with the last pollen from the last flowers available anywhere on Earth.
+./sample.txt:That means this is our Last Chance. We're the only ones who make honey, pollinate flowers and dress like this.
+./sample.txt:I'm a Pollen Jock! And it's a perfect fit. All I gotta do are the sleeves.
+./sample.txt:If anybody needs to make a call, now's the time. I got a feeling we'll be working late tonight!
+./sample.txt:It is bee-approved. Don't forget these.
+./sample.txt:Barry, I just got this huge tulip order, and I can't get them anywhere.
+./processArgsEC.c: * The struct for holding the options that will be parsed from the command
+./processArgsEC.c: *              representing which flags were set in the command line arguments.
+./processArgsEC.c: * Parameters:  info -  the argInfor_t struct.
+./processArgsEC.c: *              argc -  the argument count.
+./processArgsEC.c: *              argv[] - the array of string arguments.
+./processArgsEC.c: *               otherwise 0.
+./processArgsEC.c:  info->flags = 0;                             // Set the flag to zero 
+./processArgsEC.c:  int rc = 0;                               // The success of the regcomp
+./processArgsEC.c:  // Parse the flags form the command line 
+./processArgsEC.c:      // If the flag was not recognized 
+./processArgsEC.c:    // If there is no pattern in the argument 
+./processArgsEC.c:    // use the argument provided in the command line 
+./processArgsEC.c:  // Check for multiple files on the command line 
+./mygrepEC.c: * Description: This is the main driver of your program. Its main tasks are to
+./mygrepEC.c: *              parse any flags and arguments that are passed in, and to run the
+./mygrepEC.c: *              functionality of the grepcommand.
+./mygrepEC.c: * Parameters: argc is the argument counter, argv is each argument from the 
+./mygrepEC.c: * Side Effects: Run the program for mygrep. 
+./mygrepEC.c: * Error Conditions: The arguments could not be processed, or the regular 
+./mygrepEC.c:  // the info on Stack to process the arguments and regular expression 
+./mygrepEC.c:  int processArgs_success;      // Success of the processArgs function call 
+./mygrepEC.c:  // Process and parse all the arguments and pattern data 
+./mygrepEC.c:  // Check for an error in the expression
+./mygrepEC.c:  // Check for the help flag and print to stdout 
+./mygrepEC.c:  // Check if the file name is missing 
+./mygrepEC.c:    // Search of count for all the given filenames from the command line 
+./mygrepEC.c:      // Call grep as normal on the file 
+./mygrepEC.c:      // Keep track of the file names 
+./README:This program is called mygrep that will function very similarly to the
+./README:files and print each line that matches the pattern.
+./README:The program will take arguments from the command line and parse them accordingly
+./README:to execute specific variations of the search pattern. To see a list of commands
+./README:to use within the program the user can type ./mygrep --help in the terminal upon
+./README:initial use. The program will also take various flags at the command line that 
+./README:will determine specific behavior of the mygrep function. 
+./README:Using Cntrl D will exit the progam at any time. 
+./README:The ./mygrepEC function will add an extra specification to allow the user to 
+./README:recursively search through a directory and "grep" on the contents within the
+./README:Compilation is made easy through the use of the Make utility. A file included
+./README:with the source called Makefile specifies how to derive the target program.
+./README:To compile the program, simply do the following in a Linux terminal:
+./README:If generating new .o files for execution use the following command:
+./README:To run the program after make has finished, type the following:
+./README:I tested my program by comparing its output against the mygreptest solution 
+./README:contained in the public directory.
+./README:Some specific test cases I tried on the executable:
+./README:1.  Q: How would you replace all occurrences of the word "early" with "often" 
+./README:2.  Q: What is the difference between redirecting output with > versus | ?
+./README:    A: The ( > ) indicates to the command line that we would like the program
+./README:       to redirect the output to a file instead of printed to the console. The 
+./README:       | command is intended for redirecting the program output to be input to
+./README:       another program. 
+./README:3.  Q: What are the differences between malloc, calloc, and realloc?
+./README:    A: malloc dynamically allocates memory from the heap and doesnt zero 
+./README:       initialize, whereas calloc is essentially the same as malloc and does
+./README:       zero initialize. Realloc will dynamically allocate memory from the 
+./README:       indicated pointer in memory at the specified location, expanding the 
+./README:       memory at a specified size and amount on the next contiguos block of 
+./README:       and return a pointer to the location in memory that has been allocated.
+./README:4.  Q: The core values of the Academic Integrity Office are: respect, 
+./README:       What are three of your own core values and why are they important to you 
+./README:    A: Reliance --  Knowing that I can be reilied upon by my peers and the 
+./README:       keep a high level of trust within the department and my peers.
+./README:       Ethical -- Making sure to do the right thing should be a foundational
+./README:       ethical standards high, and that should be the expectation.
+./README:       Leadership -- Being a good leader and doing the right thing for my peers
+./README:       expected to make the right decisions and act in an integrous manner. 

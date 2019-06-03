@@ -7,8 +7,6 @@
  */
 
 #include <errno.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "pa4.h"
 #include "pa4Strings.h"
 #include <string.h>
@@ -31,16 +29,15 @@
  */
 FILE * openFile( const char * filename ) {
 
-  FILE * fp;
+  FILE * fp;      // File pointer to the filename parameter after opening file  
 
   // Check if reading from stdin 
   if( strcmp(filename , STR_STDIN ) == 0 ) {
     return stdin;
   }
 
-  // The stat struct to check the filename
-  struct stat buffer;
-  int status;
+  struct stat buffer;       // The stat struct to check the filename       
+  int status;              // the success of stat()
   errno = 0;
 
   // Stat the file 

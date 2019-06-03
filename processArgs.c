@@ -6,12 +6,10 @@
  * Sources of help: textbook, lecture notes, discussion notes, cse 30 website.
  */
 
-#include <stdio.h>
 #include <regex.h>
 #include <string.h>
 #include <getopt.h>
 #include "pa4.h"
-#include <stdlib.h>
 
 /**
  * The struct for holding the options that will be parsed from the command
@@ -37,7 +35,7 @@ static struct option options[] = {
  *              argc -  the argument count.
  *              argv[] - the array of string arguments.
  *
- * Side Effects: The 
+ * Side Effects: The flags from the command line are processed. 
  * Error Conditions: None.
  *                    
  * Return Value: ARG_PARSING_ERROR if error occurred, parsing flags, REGEX_ERROR
@@ -45,13 +43,12 @@ static struct option options[] = {
  */
 int processArgs( argInfo_t * info, int argc, char * argv[] ) {
 
-  // Initialize the local varaibles to be used for info
-  info->flags = 0;
-  const char * pattern;
-  int opts;
-  int rc = 0;
-  int pattern_flagged = 0;
-  int cflags = REG_EXTENDED | REG_NOSUB;
+  info->flags = 0;                          // Initialize the flags to 0
+  const char * pattern;                    // The pattern to search
+  int opts;                                // The options
+  int rc = 0;                              // The success of the regcomp
+  int pattern_flagged = 0;                 // If the -e flag was used
+  int cflags = REG_EXTENDED | REG_NOSUB;   // The cflags argument ot regcomp
 
   // Parse the flags form the command line 
   while( ( opts = getopt_long( argc, argv, SHORT_OPTS, options, NULL )) 
@@ -64,28 +61,28 @@ int processArgs( argInfo_t * info, int argc, char * argv[] ) {
         pattern = optarg;
         pattern_flagged = 1;
         break;
-        // Ignore case flag detected   
+      // Ignore case flag detected   
       case IGNORE_CASE_FLAG:
         info->flags = info->flags | ARG_I_FLAG;
         cflags = cflags | REG_ICASE;
         break;
-        // Invert match flag detected
+      // Invert match flag detected
       case INVERT_MATCH_FLAG:
         info->flags = info->flags | ARG_V_FLAG;
         break;
-        // Count flag detected= 
+      // Count flag detected= 
       case COUNT_FLAG:
         info->flags = info->flags | ARG_C_FLAG;
         break;
-        // Line number flag detected 
+      // Line number flag detected 
       case LINE_NUMBER_FLAG:
         info->flags = info->flags | ARG_N_FLAG;
         break;
-        // Help flag detected 
+      // Help flag detected 
       case HELP_FLAG:
         info->flags = info->flags | ARG_HELP_FLAG;
         return 0;
-        // If the flag was not recognized 
+      // If the flag was not recognized 
       default:
 
         return ARG_PARSING_ERROR;

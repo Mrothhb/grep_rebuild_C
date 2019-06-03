@@ -6,8 +6,6 @@
  * Sources of help: textbook, lecture notes, discussion notes, cse 30 website.
  */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "pa4.h"
 #include "pa4Strings.h"
 #include <errno.h>
@@ -31,10 +29,9 @@
  */
 int recursiveGrep( argInfo_t * info, const char * path ) {
 
-  // Create a stat buffer on the stack to check for directory
-  struct stat buffer;
-  int status = 0;
-  int is_stdin;
+  struct stat buffer;       // Create a struct stat to stat the file 
+  int status = 0;          // Check the status of the stat 
+  int is_stdin;           // Check if its coming from stdin 
   errno = 0;
 
 
@@ -43,7 +40,7 @@ int recursiveGrep( argInfo_t * info, const char * path ) {
 
   if( is_stdin != 0 ) {
 
-    status =  stat( path, &buffer );
+    status = stat( path, &buffer );
 
     // Check if we can stat the file 
     if( errno != 0 || status == -1 ) {

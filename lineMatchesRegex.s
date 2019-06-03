@@ -14,7 +14,8 @@
 	.equ	FP_OFFSET, 4		@ Offset from sp to set fp
 	.equ	PARAM_SPACE, 8		@ allocate space for the parameters
 
-	.global	lineMatchesRegex	@ Specify myURem as a global symbol
+	.global	lineMatchesRegex	@ Specify lineMatchesRegex as a global 
+					@ symbol
 
 	.text				@ Switch to Text segment 
 	.align 2			@ Align on evenly divisible by 4 byte 

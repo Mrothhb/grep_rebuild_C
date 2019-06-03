@@ -6,8 +6,6 @@
  * Sources of help: textbook, lecture notes, discussion notes, cse 30 website.
  */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "pa4.h"
 #include "pa4Strings.h"
 
@@ -15,7 +13,7 @@
  * Function Name: search()
  * Function Prototype: int search( const argInfo_t * info, const char * 
  *                      filename );  
- * Description: Opens filenameand prints out all lines that match the regex 
+ * Description: Opens filename and prints out all lines that match the regex 
  *                    pattern found in info.
  * Parameters: info - The struct containing the regex and flags.
  *             filename - the file to search.
@@ -27,14 +25,14 @@
  */
 int search( const argInfo_t * info, const char * filename ) {
 
-  FILE * fp;
-  int line_num = 1;
-  char * str; 
+  FILE * fp;            // File pointer the file to be opened 
+  int line_num = 1;     // Keep track of the line number
+  char * str;           // The string to search for in pattern 
 
   // Open the file 
   fp = openFile( filename );
 
-  // If the file was unsuccessfuly opened return -1
+  // Check if the file couldnt be opened  
   if( fp == NULL ) {
     return -1;
   }
@@ -44,7 +42,8 @@ int search( const argInfo_t * info, const char * filename ) {
 
     // Get the next line in the file 
     str = readLine( fp );  
-
+    
+    // Check for NULL ( the last string from readLine )
     if (str == NULL ) {
       free( str );
       break;
@@ -58,7 +57,8 @@ int search( const argInfo_t * info, const char * filename ) {
         if( (info->flags & ARG_MULTI_FILE ) == ARG_MULTI_FILE ) {
           fprintf( stdout, STR_FILENAME, filename );
         }
-
+        
+        // Check for the -n flag, and print the line number  
         if( (info->flags & ARG_N_FLAG ) == ARG_N_FLAG ) {
           fprintf( stdout, STR_LINENUM, line_num );
         }

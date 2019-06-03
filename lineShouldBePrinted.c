@@ -6,7 +6,6 @@
  * Sources of help: textbook, lecture notes, discussion notes, cse 30 website.
  */
 
-#include <stdio.h>
 #include <regex.h>
 #include "pa4.h"
 
@@ -18,7 +17,7 @@
  * Parameters:  line -  the line to print.
  *              info -  the info struct to search for the match.
  *
- * Side Effects: None.
+ * Side Effects: The indication of matching or non-matching lines returned. 
  * Error Conditions: None.
  *                    
  * Return Value: 1 if the line should be printed, else 0.

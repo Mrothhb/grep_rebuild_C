@@ -6,8 +6,6 @@
  * Sources of help: textbook, lecture notes, discussion notes, cse 30 website.
  */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "pa4.h"
 #include "pa4Strings.h"
 #include <sys/types.h>
@@ -39,13 +37,13 @@ int recursiveGrepDir( argInfo_t * info, const char * dirpath ) {
   // Set the multi file flag 
   info->flags = info->flags | ARG_MULTI_FILE;
 
+  errno = 0;
   // Open the directory with the path     
   dir = opendir( dirpath );
-  errno = 0;
 
   // Check if the directory could not be opened 
   if( dir == NULL || errno != 0 ) {
-    fprintf( stderr, STR_ERR_OPEN_FILE, dirpath, strerror(EISDIR) );
+    fprintf( stderr, STR_ERR_OPEN_FILE, dirpath, strerror(EISDIR));
     return -1;
   }
 

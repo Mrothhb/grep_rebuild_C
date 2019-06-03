@@ -46,13 +46,12 @@ static struct option options[] = {
  */
 int processArgs( argInfo_t * info, int argc, char * argv[] ) {
 
-  // Initialize the local varaibles to be used for info
-  info->flags = 0;
-  const char * pattern;
-  int opts;
-  int rc = 0;
-  int pattern_flagged = 0;
-  int cflags = REG_EXTENDED | REG_NOSUB;
+  info->flags = 0;                             // Set the flag to zero 
+  const char * pattern;                       // The pattern to search 
+  int opts;                                  // The options
+  int rc = 0;                               // The success of the regcomp
+  int pattern_flagged = 0;                 // The -e flag wasnt used 
+  int cflags = REG_EXTENDED | REG_NOSUB;  // The clfags argument to regcomp
 
   // Parse the flags form the command line 
   while( ( opts = getopt_long( argc, argv, EC_SHORT_OPTS, options, NULL )) 

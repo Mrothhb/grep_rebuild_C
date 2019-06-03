@@ -2,7 +2,7 @@
  * Filename: testseacrh.c
  * Author: Matt Roth
  * UserId: cs30xgs 
- * Date: TODO
+ * Date: June 19th, 2019
  * Sources of help: textbook, cse 30 website, lecture notes, discussion notes.
  */
 
@@ -27,7 +27,6 @@ void testsearch() {
   info.flags = ARG_MULTI_FILE;
   count( &info, "sample.txt" ); 
   count ( &info, "secret.txt");
-
 
 }
 

@@ -6,8 +6,6 @@
  * Sources of help: textbook, lecture notes, discussion notes, cse 30 website.
  */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "pa4.h"
 #include "pa4Strings.h"
 
@@ -44,7 +42,8 @@ int count( const argInfo_t * info, const char * filename ) {
 
     // Get the next line in the file 
     str = readLine( fp );  
-
+    
+    // Check for the NULL string ( last line read in from readLine )
     if (str == NULL ) {
       free( str );
       break;
