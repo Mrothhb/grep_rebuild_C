@@ -1,16 +1,14 @@
 /*
- * Filename: myGrepEC.c
+ * Filename: mygrepEC.c
  * Author: Matt Roth
  * UserId: cs30xgs
  * Date: June 2nd, 2019
  * Sources of help: Textbook, cse30 website, lecture notes, discussion notes.
  */
 
-#include <stdio.h>
 #include "pa4.h"
 #include "pa4Strings.h"
 #include <string.h>
-#include <stdlib.h>
 #include <getopt.h>
 
 /*
@@ -28,9 +26,8 @@
  */
 int main( int argc, char * argv[] ) {
 
-  // the info on Stack to process the arguments and regular expression 
-  argInfo_t info;
-  int processArgs_success;    // The success of the processArgs function  
+  argInfo_t info;               // argInfo_t on stack for regex pattern/flags 
+  int processArgs_success;      // Success of the processArgs function call 
 
   // Process and parse all the arguments and pattern data 
   processArgs_success = processArgs( &info, argc, argv );
@@ -48,29 +45,47 @@ int main( int argc, char * argv[] ) {
 
   // Check for the help flag and print to stdout 
   if( (info.flags & ARG_HELP_FLAG) == ARG_HELP_FLAG ) {
-    fprintf( stdout, STR_EC_USAGE, argv[0], argv[0] );
+    fprintf( stdout, STR_USAGE, argv[0], argv[0]);
     return EXIT_SUCCESS;
   }
 
   // Check if the file name is missing 
-  if( argc < THREE_ARGS ) {
-    if( (info.flags & ARG_R_FLAG ) == ARG_R_FLAG ) {
-      recursiveGrep( &info, STR_CURR_DIR);
+  if( !((argc - optind) > 0) ) {
+    if( (info.flags & ARG_R_FLAG ) == ARG_R_FLAG) {
+      recursiveGrep( &info, STR_CURR_DIR );
     }
-  } 
 
+    else {
+      // Check for the count flag
+      if( (info.flags & ARG_C_FLAG) == ARG_C_FLAG ) {
+        count( &info, STR_STDIN );
+      } else {
+        search( &info, STR_STDIN );
+      }
+    } 
+  }
   else {
 
     // Search of count for all the given filenames from the command line 
     while( argv[optind] != NULL) {
-      recursiveGrep( &info, argv[optind] );  
+      if( (info.flags & ARG_R_FLAG ) == ARG_R_FLAG) {
+
+        recursiveGrep( &info, argv[optind] );
+      }
+      // Call grep as normal on the file 
+      else {  
+        if( (info.flags & ARG_C_FLAG) == ARG_C_FLAG ) {
+          count( &info, argv[optind] );
+        } else {
+          search( &info, argv[optind] );
+        }
+      }
+      // Keep track of the file names 
+      ++optind; 
     }
-    // Keep track of the file names 
-    ++optind; 
   }
 
   // Free allocated memory 
   regfree( &info.pattern );
-
+  return EXIT_SUCCESS;
 }
-
